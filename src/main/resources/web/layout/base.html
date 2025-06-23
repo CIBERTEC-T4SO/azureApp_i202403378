@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE" th:text="${@environment.getProperty('spring.application.name')}">Template Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/webjars/fortawesome__fontawesome-free/6.7.2/css/all.min.css}" />
+    <link rel="stylesheet" th:href="@{/webjars/overlayscrollbars/2.11.4/styles/overlayscrollbars.min.css}" />
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css}" />
+    <link rel="stylesheet" th:href="@{/webjars/admin-lte/4.0.0-beta3/dist/css/adminlte.min.css}" />
+    <link rel="stylesheet" th:href="@{/webjars/apexcharts/4.7.0/dist/apexcharts.css}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/source-sans-3@5.0.12/index.css"/>
+</head>
+
+<body class="sidebar-expand-lg">
+<div class="app-wrapper">
+    <nav th:replace="~{fragments/navbar :: navbar}"></nav>
+    <aside th:replace="~{fragments/aside :: aside}"></aside>
+    <main class="app-main" >
+        <div class="app-content-header">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6"><h3 class="mb-0"  layout:fragment="title">Template Title Page</h3></div>
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-end">
+                            <li class="breadcrumb-item"><a href="#" layout:fragment="title_parent">Template parent Link</a></li>
+                            <li class="breadcrumb-item active" aria-current="page" ><label layout:fragment="title_child">Template current title</label></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="app-content"  >
+            <div class="container-fluid"  layout:fragment="content">
+                Content goes here
+            </div>
+        </div>
+    </main>
+    <footer  th:replace="~{fragments/footer :: footer}"></footer>
+</div>
+<script th:src="@{/webjars/overlayscrollbars/2.11.4/browser/overlayscrollbars.browser.es6.min.js}"></script>
+<script th:src="@{/webjars/popperjs__core/2.11.8/dist/umd/popper.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/5.3.7/dist/js/bootstrap.min.js}"></script>
+<script th:src="@{/webjars/admin-lte/4.0.0-beta3/dist/js/adminlte.min.js}"></script>
+<script th:src="@{/webjars/sortablejs/1.15.6/Sortable.min.js}"></script>
+<script th:src="@{/webjars/apexcharts/4.7.0/dist/apexcharts.min.js}"></script>
+</body>
+</html>

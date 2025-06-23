@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/base}">
+
+<head>
+    <title>Inicio Home</title>
+</head>
+
+<body >
+<h3  layout:fragment="title">Inicio Home</h3>
+<a href="#" layout:fragment="title_parent">Home</a>
+<span layout:fragment="title_child">Dashboard</span>
+<div layout:fragment="content">
+    <div class="callout callout-info mb-4">
+        <h5 class="fw-bold">Tips</h5>
+        <p>
+            The
+            <a
+                    href="/starter.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="callout-link"
+            >
+                Utiliza Blank Page Starter Template
+            </a>
+            Este es un ejemplo de una página en blanco que utiliza el
+            <code>layout:decorate</code> para heredar el diseño base de la aplicación. <br>
+            Debes reemplazar todo desde la línea 16
+            Para el Cuerpo en <code> layout:fragment="content"</code> Debes reemplazar todo desde la línea 16.
+        </p>
+    </div>
+    <p>The layout consists of five major parts:</p>
+    <ul>
+        <li>Title<code>head.title</code> Actualizar el título de Navegador</li>
+        <li>Título del la página <code>layout:fragment="title"</code> . El Título dentro de la página .</li>
+        <li>Título del parent <code>layout:fragment="title_parent"</code> .Título a la derecha del la pagina parent.</li>
+        <li>
+            Título del la página hijo <code>layout:fragment="title_child"</code> . El Título dentro de la página, es la actual que será como hijo a la derecha .
+        </li>
+        <li>Contenido  <code>layout:fragment="content"</code> . Aquí el contenido en HTML.</li>
+
+    </ul>
+
+</div>
+</body>
+</html>
