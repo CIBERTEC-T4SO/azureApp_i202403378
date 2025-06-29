@@ -50,4 +50,4 @@ jobs:
           app-name: 'cibertec'
           slot-name: 'Production'
           package: '*.jar'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D3C6D5D7B1FF49F38680C103DFA0D036 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_630F8AB4121A481BAD90653C8BE89ABB }}
